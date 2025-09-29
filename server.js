@@ -37,6 +37,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("Backend ishlayapti 🚀");
+});
+
 const mongoUrl = process.env.MONGODB_URI;
 
 async function startServer() {
